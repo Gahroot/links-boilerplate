@@ -10,7 +10,7 @@ export default function Home() {
   const reducedMotion = false; // You can add prefers-reduced-motion detection here
 
   return (
-    <div className="h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 relative">
+    <div className="h-screen overflow-hidden bg-[#121212] relative">
       <FloatingBackground />
       <div className="container main-content mx-auto px-4 py-8 md:py-16 max-w-6xl relative z-10 h-full flex items-center justify-center">
         {/* Main content */}

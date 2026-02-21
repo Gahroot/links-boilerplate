@@ -6,7 +6,7 @@
  */
 
 export interface SocialLink {
-  icon: 'youtube' | 'tiktok' | 'instagram' | 'twitter' | 'linkedin' | 'github' | 'email';
+  icon: 'youtube' | 'tiktok' | 'instagram' | 'twitter' | 'linkedin' | 'github' | 'email' | 'skool' | 'website';
   label: string;
   value?: string; // Display value (optional, defaults to label)
   href: string;
@@ -40,55 +40,49 @@ export interface SiteConfig {
   };
 }
 
-// REPLACE THIS WITH YOUR INFORMATION
 export const siteConfig: SiteConfig = {
   // Profile Information
-  name: 'Your Name',
-  title: 'Your Title / Tagline',
-  description: 'Your description or bio goes here.',
+  name: 'Nolan Grout',
+  title: 'AI Automation & Education',
+  description: 'Learn AI, automate your business, and stay ahead of the curve.',
   profileImage: '/images/profile-placeholder.png',
 
   // Social Media Links
-  // Add or remove links as needed
   links: [
     {
-      icon: 'email',
-      label: 'E-mail',
-      value: 'your@email.com',
-      href: 'mailto:your@email.com',
-      badge: 'Open for Work',
-      featured: true, // This button will have special styling
+      icon: 'skool',
+      label: 'Skool',
+      value: 'Learn AI with me',
+      href: 'https://www.skool.com/ai-automation',
+      badge: 'Community',
+      featured: true,
+    },
+    {
+      icon: 'website',
+      label: 'Prestyj.com',
+      value: 'Integrate AI into your business',
+      href: 'https://prestyj.com',
+      badge: 'Services',
+      featured: true,
     },
     {
       icon: 'youtube',
       label: 'YouTube',
-      href: 'https://youtube.com/@yourchannel',
-      badge: 'New Videos',
+      href: 'https://youtube.com/@prestyj',
     },
     {
-      icon: 'tiktok',
-      label: 'TikTok',
-      href: 'https://tiktok.com/@yourusername',
-    },
-    {
-      icon: 'instagram',
-      label: 'Instagram',
-      href: 'https://instagram.com/yourusername',
-    },
-    {
-      icon: 'twitter',
-      label: 'Twitter',
-      href: 'https://twitter.com/yourusername',
+      icon: 'linkedin',
+      label: 'LinkedIn',
+      href: 'https://linkedin.com/in/nolangrout',
     },
   ],
 
   // SEO & Meta Tags
   seo: {
-    title: 'Your Name - Your Title',
-    description: 'Your description for search engines and social media previews.',
+    title: 'Nolan Grout - AI Automation & Education | Prestyj',
+    description: 'Learn AI, automate your business, and stay ahead of the curve.',
     ogImage: '/og-image.png',
-    url: 'https://yourdomain.com',
-    twitterHandle: '@yourusername',
+    url: 'https://links.prestyj.com',
   },
 
   // Theme Configuration

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Unbounded, Roboto } from 'next/font/google';
+import { Inter, Manrope } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/config/site-config';
 
@@ -8,16 +8,9 @@ const inter = Inter({
   subsets: ['latin'],
 });
 
-const unbounded = Unbounded({
-  variable: '--font-unbounded',
+const manrope = Manrope({
+  variable: '--font-manrope',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-});
-
-const roboto = Roboto({
-  variable: '--font-roboto',
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
 });
 
 export const metadata: Metadata = {
@@ -56,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${unbounded.variable} ${roboto.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} ${manrope.variable} antialiased`}>{children}</body>
     </html>
   );
 }

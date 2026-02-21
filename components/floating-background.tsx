@@ -7,7 +7,7 @@ export function FloatingBackground() {
     <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
       {/* Floating gradient orbs */}
       <motion.div
-        className="absolute top-20 left-10 w-64 h-64 bg-blue-300/20 rounded-full blur-3xl"
+        className="absolute top-20 left-10 w-64 h-64 bg-[#7058e3]/10 rounded-full blur-3xl"
         animate={{
           x: [0, 30, -20, 0],
           y: [0, -30, 20, 0],
@@ -20,7 +20,7 @@ export function FloatingBackground() {
         }}
       />
       <motion.div
-        className="absolute top-40 right-20 w-80 h-80 bg-purple-300/15 rounded-full blur-3xl"
+        className="absolute top-40 right-20 w-80 h-80 bg-[#5ee5b3]/8 rounded-full blur-3xl"
         animate={{
           x: [0, -25, 35, 0],
           y: [0, 25, -15, 0],
@@ -34,7 +34,7 @@ export function FloatingBackground() {
         }}
       />
       <motion.div
-        className="absolute bottom-20 left-1/4 w-72 h-72 bg-pink-300/10 rounded-full blur-3xl"
+        className="absolute bottom-20 left-1/4 w-72 h-72 bg-[#7058e3]/6 rounded-full blur-3xl"
         animate={{
           x: [0, 20, -30, 0],
           y: [0, -20, 25, 0],
@@ -48,7 +48,7 @@ export function FloatingBackground() {
         }}
       />
       <motion.div
-        className="absolute bottom-40 right-1/3 w-96 h-96 bg-indigo-300/10 rounded-full blur-3xl"
+        className="absolute bottom-40 right-1/3 w-96 h-96 bg-[#5ee5b3]/5 rounded-full blur-3xl"
         animate={{
           x: [0, -35, 15, 0],
           y: [0, 30, -25, 0],

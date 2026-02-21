@@ -17,13 +17,15 @@ interface ContactRowProps {
 
 // Gradient colors for each social platform
 const gradientMap: Record<string, string> = {
-  email: 'from-slate-500 to-slate-600 hover:from-slate-600 hover:to-slate-700 shadow-slate-500/25 hover:shadow-slate-500/40',
-  youtube: 'from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 shadow-red-500/25 hover:shadow-red-500/40',
-  tiktok: 'from-gray-800 to-black hover:from-black hover:to-gray-900 shadow-gray-800/25 hover:shadow-gray-800/40',
-  instagram: 'from-pink-500 via-purple-500 to-orange-500 hover:from-pink-600 hover:via-purple-600 hover:to-orange-600 shadow-pink-500/25 hover:shadow-purple-500/40',
-  twitter: 'from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 shadow-blue-500/25 hover:shadow-blue-500/40',
-  linkedin: 'from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-blue-600/25 hover:shadow-blue-600/40',
-  github: 'from-gray-700 to-gray-800 hover:from-gray-800 hover:to-gray-900 shadow-gray-700/25 hover:shadow-gray-700/40',
+  skool: 'from-[#7058e3] to-[#5e48c8] hover:from-[#5e48c8] hover:to-[#4d3aab] shadow-[#7058e3]/25 hover:shadow-[#7058e3]/40',
+  website: 'from-[#5ee5b3] to-[#4cc99a] hover:from-[#4cc99a] hover:to-[#3db385] shadow-[#5ee5b3]/25 hover:shadow-[#5ee5b3]/40',
+  email: 'from-[#1e1e1e] to-[#2a2a2a] hover:from-[#2a2a2a] hover:to-[#333333] shadow-white/5 hover:shadow-white/10',
+  youtube: 'from-[#1e1e1e] to-[#2a2a2a] hover:from-[#2a2a2a] hover:to-[#333333] shadow-white/5 hover:shadow-white/10',
+  tiktok: 'from-[#1e1e1e] to-[#2a2a2a] hover:from-[#2a2a2a] hover:to-[#333333] shadow-white/5 hover:shadow-white/10',
+  instagram: 'from-[#1e1e1e] to-[#2a2a2a] hover:from-[#2a2a2a] hover:to-[#333333] shadow-white/5 hover:shadow-white/10',
+  twitter: 'from-[#1e1e1e] to-[#2a2a2a] hover:from-[#2a2a2a] hover:to-[#333333] shadow-white/5 hover:shadow-white/10',
+  linkedin: 'from-[#1e1e1e] to-[#2a2a2a] hover:from-[#2a2a2a] hover:to-[#333333] shadow-white/5 hover:shadow-white/10',
+  github: 'from-[#1e1e1e] to-[#2a2a2a] hover:from-[#2a2a2a] hover:to-[#333333] shadow-white/5 hover:shadow-white/10',
 };
 
 export function ContactRow({
@@ -69,7 +71,7 @@ export function ContactRow({
             ease: 'easeInOut',
           }}
         >
-          <div className="bg-gradient-to-r from-amber-400 to-orange-500 text-white px-2.5 py-1 rounded-full text-xs font-bold shadow-lg">
+          <div className="bg-gradient-to-r from-[#7058e3] to-[#5ee5b3] text-white px-2.5 py-1 rounded-full text-xs font-bold shadow-lg">
             {badge}
           </div>
         </motion.div>
@@ -77,14 +79,14 @@ export function ContactRow({
 
       <div
         className={`relative flex items-center justify-between p-3 md:p-5 rounded-lg md:rounded-xl bg-gradient-to-r ${gradient} text-white overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-100 ${
-          featured ? 'ring-2 ring-white/50 ring-offset-2 ring-offset-transparent' : ''
+          featured ? 'ring-2 ring-[#7058e3]/60 ring-offset-2 ring-offset-[#121212]' : ''
         }`}
       >
         <div className="flex items-center gap-3 md:gap-4">
           <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-lg md:rounded-xl group-hover:bg-white/30 transition-all duration-300 group-hover:scale-110">
             <SocialIcon icon={icon} className="w-5 h-5 md:w-6 md:h-6 text-white" />
           </div>
-          <span className="text-sm md:text-base font-semibold tracking-wide font-[family-name:var(--font-roboto)]">
+          <span className="text-sm md:text-base font-semibold tracking-wide font-[family-name:var(--font-manrope)]">
             {value || label}
           </span>
         </div>

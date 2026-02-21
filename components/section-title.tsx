@@ -15,7 +15,7 @@ export function SectionTitle({ name, reducedMotion = false }: SectionTitleProps)
       animate={reducedMotion ? undefined : { opacity: 1 }}
       transition={reducedMotion ? undefined : { delay: 0.2 }}
     >
-      <h1 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-wide font-[family-name:var(--font-unbounded)]">
+      <h1 className="text-2xl md:text-3xl font-bold text-[#ececec] tracking-wide font-[family-name:var(--font-manrope)]">
         {name}
       </h1>
     </motion.div>

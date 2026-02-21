@@ -23,7 +23,7 @@ export function ProfileSection({ name, profileImage, reducedMotion = false }: Pr
         animate={reducedMotion ? undefined : { opacity: 1, y: 0 }}
         transition={reducedMotion ? undefined : { duration: 0.4, delay: 0.1 }}
       >
-        <div className="w-44 h-56 sm:w-52 sm:h-64 md:w-56 md:h-72 overflow-hidden bg-slate-100 relative rounded-3xl shadow-2xl shadow-blue-500/10 ring-1 ring-slate-200">
+        <div className="w-44 h-56 sm:w-52 sm:h-64 md:w-56 md:h-72 overflow-hidden bg-[#1e1e1e] relative rounded-3xl shadow-2xl shadow-[#7058e3]/10 ring-1 ring-white/10">
           <Image
             src={profileImage}
             alt={`${name} Profile`}
@@ -33,7 +33,7 @@ export function ProfileSection({ name, profileImage, reducedMotion = false }: Pr
             unoptimized
           />
           {/* Fade to white at bottom - 30% of image height */}
-          <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-white to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-[#121212] to-transparent" />
         </div>
       </motion.div>
     </motion.div>
