@@ -45,15 +45,15 @@ export const siteConfig: SiteConfig = {
   name: 'Nolan Grout',
   title: 'AI Automation & Education',
   description: 'Learn AI, automate your business, and stay ahead of the curve.',
-  profileImage: '/images/profile-placeholder.png',
+  profileImage: '/images/nolan-headshot.jpg',
 
   // Social Media Links
   links: [
     {
       icon: 'skool',
       label: 'Skool',
-      value: 'Learn AI with me',
-      href: 'https://www.skool.com/ai-automation',
+      value: 'Learn AI with me (Skool)',
+      href: 'https://www.skool.com/the-prestyj-blueprint-7395/about',
       badge: 'Community',
       featured: true,
     },
@@ -68,12 +68,12 @@ export const siteConfig: SiteConfig = {
     {
       icon: 'youtube',
       label: 'YouTube',
-      href: 'https://youtube.com/@prestyj',
+      href: 'https://www.youtube.com/@agenticnolan',
     },
     {
       icon: 'linkedin',
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/nolangrout',
+      href: 'https://www.linkedin.com/in/nolan-grout-1b4390385/',
     },
   ],
 

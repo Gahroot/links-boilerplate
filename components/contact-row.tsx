@@ -15,17 +15,17 @@ interface ContactRowProps {
   featured?: boolean;
 }
 
-// Gradient colors for each social platform
-const gradientMap: Record<string, string> = {
-  skool: 'from-[#7058e3] to-[#5e48c8] hover:from-[#5e48c8] hover:to-[#4d3aab] shadow-[#7058e3]/25 hover:shadow-[#7058e3]/40',
-  website: 'from-[#5ee5b3] to-[#4cc99a] hover:from-[#4cc99a] hover:to-[#3db385] shadow-[#5ee5b3]/25 hover:shadow-[#5ee5b3]/40',
-  email: 'from-[#1e1e1e] to-[#2a2a2a] hover:from-[#2a2a2a] hover:to-[#333333] shadow-white/5 hover:shadow-white/10',
-  youtube: 'from-[#1e1e1e] to-[#2a2a2a] hover:from-[#2a2a2a] hover:to-[#333333] shadow-white/5 hover:shadow-white/10',
-  tiktok: 'from-[#1e1e1e] to-[#2a2a2a] hover:from-[#2a2a2a] hover:to-[#333333] shadow-white/5 hover:shadow-white/10',
-  instagram: 'from-[#1e1e1e] to-[#2a2a2a] hover:from-[#2a2a2a] hover:to-[#333333] shadow-white/5 hover:shadow-white/10',
-  twitter: 'from-[#1e1e1e] to-[#2a2a2a] hover:from-[#2a2a2a] hover:to-[#333333] shadow-white/5 hover:shadow-white/10',
-  linkedin: 'from-[#1e1e1e] to-[#2a2a2a] hover:from-[#2a2a2a] hover:to-[#333333] shadow-white/5 hover:shadow-white/10',
-  github: 'from-[#1e1e1e] to-[#2a2a2a] hover:from-[#2a2a2a] hover:to-[#333333] shadow-white/5 hover:shadow-white/10',
+// Solid background colors for each social platform
+const colorMap: Record<string, string> = {
+  skool: 'bg-[#7058e3] hover:bg-[#7058e3]/90 shadow-sm',
+  website: 'bg-[#7058e3] hover:bg-[#7058e3]/90 shadow-sm',
+  email: 'bg-[#1e1e1e] hover:bg-[#2a2a2a] border border-white/10 shadow-sm',
+  youtube: 'bg-[#1e1e1e] hover:bg-[#2a2a2a] border border-white/10 shadow-sm',
+  tiktok: 'bg-[#1e1e1e] hover:bg-[#2a2a2a] border border-white/10 shadow-sm',
+  instagram: 'bg-[#1e1e1e] hover:bg-[#2a2a2a] border border-white/10 shadow-sm',
+  twitter: 'bg-[#1e1e1e] hover:bg-[#2a2a2a] border border-white/10 shadow-sm',
+  linkedin: 'bg-[#1e1e1e] hover:bg-[#2a2a2a] border border-white/10 shadow-sm',
+  github: 'bg-[#1e1e1e] hover:bg-[#2a2a2a] border border-white/10 shadow-sm',
 };
 
 export function ContactRow({
@@ -46,7 +46,7 @@ export function ContactRow({
     }
   };
 
-  const gradient = gradientMap[icon] || gradientMap.email;
+  const bgColor = colorMap[icon] || colorMap.email;
 
   return (
     <motion.a
@@ -71,14 +71,14 @@ export function ContactRow({
             ease: 'easeInOut',
           }}
         >
-          <div className="bg-gradient-to-r from-[#7058e3] to-[#5ee5b3] text-white px-2.5 py-1 rounded-full text-xs font-bold shadow-lg">
+          <div className="bg-[#5ee5b3]/20 border border-[#5ee5b3]/40 text-[#5ee5b3] px-2 py-0.5 rounded-full text-xs font-semibold">
             {badge}
           </div>
         </motion.div>
       )}
 
       <div
-        className={`relative flex items-center justify-between p-3 md:p-5 rounded-lg md:rounded-xl bg-gradient-to-r ${gradient} text-white overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-100 ${
+        className={`relative flex items-center justify-between p-3 md:p-5 rounded-xl ${bgColor} text-white overflow-hidden transition-all duration-300 transform hover:scale-105 active:scale-100 ${
           featured ? 'ring-2 ring-[#7058e3]/60 ring-offset-2 ring-offset-[#121212]' : ''
         }`}
       >
@@ -98,8 +98,6 @@ export function ContactRow({
           )}
         </div>
 
-        {/* Shine effect - handled by CSS for now */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 -translate-x-full group-hover:translate-x-full pointer-events-none transition-all duration-600 ease-in-out" />
       </div>
     </motion.a>
   );
